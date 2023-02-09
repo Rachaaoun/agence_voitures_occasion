@@ -1,5 +1,6 @@
 from datetime import datetime
 from agence import Agence
+import numpy as np
 marque={'kia':1,'peugoet':2,'mercedes':3,'BMW':4,'Polo':5}
 class Voiture :
 
@@ -19,7 +20,9 @@ class Voiture :
         date=self.date_circulation.strftime('%d/%m/%Y')
         print('%-10s|%-10s|%-8d|%-15s' %(self.matricule,self.marque,self.kilometrage,date))
 
-
+    def convertir_en_vecteur(self):
+        marque =np.array([marque[self.marque],self.kilometrage,self.date_circulation.year])
+        return marque
 
 
 if(__name__ == '__main__'):
