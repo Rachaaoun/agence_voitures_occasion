@@ -1,6 +1,6 @@
 from datetime import datetime
 import numpy as np
-marques={'kia':1,'peugoet':2,'mercedes':3,'BMW':4,'Polo':5}
+marques={'kia':1,'citroen':2,'ferrari':3,'ford':4,'mercedes':5}
 class Voiture :
 
     def __init__(self,matricule='',marque='',kilometrage=0,date_circulation=datetime.now()):
