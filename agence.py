@@ -29,7 +29,12 @@ class Agence :
            vect= v.convertir_en_vecteur()
            I.append(vect)
         I=np.array(I)
-        return I
+        
+        marque=input('donner marque ')
+        kilometrage=int(input ('donner kilometrage '))
+        date =datetime.strptime(input("saisir la date de circulation"),'%d/%m/%Y')
+        vreq=Voiture(marque,kilometrage,date)
+        indexreq=vreq.convertir_en_vecteur()
 
 
 
